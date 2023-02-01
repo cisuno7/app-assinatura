@@ -1,12 +1,11 @@
 package com.example.assinatura
 
 import android.graphics.Bitmap
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
 import android.widget.Button
 import android.widget.LinearLayout
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import java.io.File
 import java.io.FileOutputStream
 
@@ -14,6 +13,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        supportActionBar!!.hide()
         val signatureView = SignatureView(this)
        val linearLayout =findViewById<LinearLayout>(R.id.line1)
         val button=findViewById<Button>(R.id.button)
