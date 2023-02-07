@@ -1,10 +1,7 @@
 package com.example.assinatura
 
 import android.content.Context
-import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.Paint
-import android.graphics.Path
+import android.graphics.*
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
@@ -16,7 +13,7 @@ class SignatureView @JvmOverloads constructor(
 ) : View(context, attrs, defStyleAttr) {
 
     private val paint = Paint().apply {
-        color = Color.GREEN
+        color = Color.BLACK
         style = Paint.Style.STROKE
         strokeWidth = 5f
     }
@@ -40,7 +37,10 @@ class SignatureView @JvmOverloads constructor(
             }
             else -> return false
         }
+
     }
+
+
 
     fun clear() {
         path.reset()
